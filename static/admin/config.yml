@@ -31,9 +31,9 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
-      - label: "config.toml"
-        name: "config"
-        file: "config.toml"
+      - label: "CMS Config"
+        name: "cms-config"
+        file: "static/admin/config.yml"
         fields:
           - {label: "Content", name: "body", widget: "text"}
   - name: courses
