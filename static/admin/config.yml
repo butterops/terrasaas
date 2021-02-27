@@ -16,30 +16,6 @@ i18n:
   default_locale: en
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - label: "FAQ Page"
-        name: "faq"
-        file: "content/faq/_index.en.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
-      - label: "Contact Page"
-        name: "contact"
-        file: "content/contact/_index.en.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
-  - name: "settings"
-    label: "Settings"
-    format: frontmatter  #<--------------------------- Workaround
-    files:
-      - name: "cms-config"
-        label: "CMS Config"
-        file: "static/admin/config.yml"
-        fields:
-          - {label: "Content", name: "body", widget: "text"}
   - name: courses
     i18n: true
     label: Courses
@@ -64,3 +40,27 @@ collections:
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
     meta: { path: { widget: string, label: 'Path', index_file: '_index' } }
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "FAQ Page"
+        name: "faq"
+        file: "content/faq/_index.en.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+      - label: "Contact Page"
+        name: "contact"
+        file: "content/contact/_index.en.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+  - name: "settings"
+    label: "Settings"
+    format: frontmatter  #<--------------------------- Workaround
+    files:
+      - name: "cms-config"
+        label: "CMS Config"
+        file: "static/admin/config.yml"
+        fields:
+          - {label: "Content", name: "body", widget: "code"}
