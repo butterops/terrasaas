@@ -36,7 +36,7 @@ collections:
     label: Courses
     label_singular: 'Course'
     folder: content
-    filter: {field: "type", value: "docs"}
+    filter: {field: "layout", value: "course"}
     create: true
     allow_nesting: true
     # adding a nested object will show the collection folder structure
