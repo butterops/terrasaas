@@ -1,0 +1,211 @@
+################################# Default configuration ###################
+# provide your domain here
+baseURL = "https://examplesite.com/"
+# theme
+theme = "dot"
+# site title
+title = "TerraSaas - Cloud Architecture"
+# disable language
+disableLanguages = []
+# google analytics
+googleAnalytics = "" # paste your analytics ID here. (Ex: UA-123-45)
+# unsafe html
+[markup.goldmark.renderer]
+unsafe = true
+
+
+############################# Default Parameters ##########################
+[params]
+# logo is for all page
+# logo = "images/logo.png"
+# logo white is for homepage logo, you can use colorful logo too...
+# logo_white = "images/logo-text.png"
+# when logo is empty, it will shown your site title
+
+# customize color
+# primary_color = "#02007e"
+# body_color = "#f9f9f9"
+# text_color = "#636363"
+# text_color_dark = "#242738"
+# white_color = "#ffffff"
+# light_color = "#f8f9fa"
+
+# customize color
+
+primary_color = "#6930c3" #"#02007e"
+
+
+body_color = "#f9f9f9"
+white_color = "#ffffff"
+light_color = "#e5e5e5"
+
+text_color = "#14213d"
+text_color_dark = "#000000"
+
+
+# font family
+font_family = "Lato" # Choose font family from : https://fonts.google.com/
+
+# contact form action
+contact_form_action = "#" # contact form works with : https://formspree.io
+
+
+############################## social links ##############################
+# [[params.social]]
+# icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
+# link = "#"
+
+# [[params.social]]
+# icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
+# link = "#"
+
+[[params.social]]
+text = "Contact"
+link = "contact"
+
+[[params.social]]
+text = "FAQ"
+link = "faq"
+  
+[[params.social]]
+icon = "ti-github" # themify icon pack : https://themify.me/themify-icons
+link = "https://www.github.com/butterops"
+target = "blank"
+
+[[params.social]]
+icon = "ti-slack" # themify icon pack : https://themify.me/themify-icons
+link = "https://butterops.slack.com"
+target = "blank"
+
+################################ English Language ######################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+weight = 1
+copyright = "©2021- A modern infrastructure and cloud migration guide maintained and updated by [ButterOps](https://butterops.dev/)"
+
+# banner
+[Languages.en.params.banner]
+title = "Migrate Your SaaS Apps & APIs Into The Cloud"
+subtitle = "Along with your **Full Infrastructure As Terraform Code**"
+bg_image = "images/banner.jpg"
+placeholder = "Dig into our open infra guides..."
+
+# call to action
+[Languages.en.params.cta]
+enable = true
+title = "Not sure of your app infrastructure!"
+content = "Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam."
+# call to action button
+[Languages.en.params.cta.button]
+enable = true
+label = "contact us"
+link = "contact"
+
+
+################## english navigation #################
+# [[Languages.en.menu.main]]
+# name = "Home"
+# url = "/"
+# weight = 1
+
+# [[Languages.en.menu.main]]
+# name = "Faq"
+# url = "faq"
+# weight = 2
+
+# [[Languages.en.menu.main]]
+# name = "contact"
+# url = "contact"
+# weight = 3
+
+# # Dropdown menu
+# [[Languages.en.menu.main]]
+# weight = 4
+# name = "docs"
+# hasChildren = true
+
+#   [[Languages.en.menu.main]]
+#   parent = "docs"
+#   name = "Installation"
+#   url = "installation"
+#   weight = 1
+
+#   [[Languages.en.menu.main]]
+#   parent = "docs"
+#   name = "Billing and Pricing"
+#   url = "billing-pricing"
+#   weight = 2
+
+#   [[Languages.en.menu.main]]
+#   parent = "docs"
+#   name = "Features"
+#   url = "features"
+#   weight = 3
+
+
+################################### Franch Language ######################
+[Languages.fr]
+languageName = "Fr"
+languageCode = "fr-fr"
+weight = 2
+copyright = "Copyright © 2020 un thème Hugo par [Gethugothemes](https://gethugothemes.com/)"
+
+# banner
+[Languages.fr.params.banner]
+title = "Comment pouvons nous aider?"
+subtitle = "Trouvez rapidement des conseils et des réponses auprès de notre équipe d'assistance ou contactez-nous."
+bg_image = "images/banner.jpg"
+placeholder = "Avoir une question? Il suffit de demander ici ou de saisir les termes"
+
+# call to action
+[Languages.fr.params.cta]
+enable = true
+title = "Vous n'avez pas trouvé de réponse à votre question?"
+content = "Contactez-nous pour plus de détails sur les services supplémentaires et la tarification du travail personnalisé"
+# call to action button
+[Languages.fr.params.cta.button]
+enable = true
+label = "Contactez nous"
+link = "contact"
+
+
+################## french navigation #################
+[[Languages.fr.menu.main]]
+name = "Accueil"
+url = "/"
+weight = 1
+
+[[Languages.fr.menu.main]]
+name = "Faq"
+url = "faq"
+weight = 2
+
+[[Languages.fr.menu.main]]
+name = "contact"
+url = "contact"
+weight = 3
+
+# Dropdown menu
+[[Languages.fr.menu.main]]
+weight = 4
+name = "docs"
+hasChildren = true
+
+  [[Languages.fr.menu.main]]
+  parent = "docs"
+  name = "Installation"
+  url = "installation"
+  weight = 1
+
+  [[Languages.fr.menu.main]]
+  parent = "docs"
+  name = "Billing and Pricing"
+  url = "billing-pricing"
+  weight = 2
+
+  [[Languages.fr.menu.main]]
+  parent = "docs"
+  name = "Features"
+  url = "features"
+  weight = 3

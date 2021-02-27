@@ -1,0 +1,40 @@
+<nav class="navbar {{ if .IsHome }}navbar-dark{{ else }}navbar-light{{ end }}">
+  <div class="container">
+    <a class="navbar-brand px-2" href="{{ site.BaseURL | relLangURL }}">
+      {{ $logo:= site.Params.logo }}
+      {{ $logoWhite:= site.Params.logo_white }}
+      {{ if (or $logo $logoWhite) }}
+      {{ if .IsHome }}
+      <img class="img-fluid" src="{{if $logoWhite }}{{ $logoWhite | absURL }} {{ else }} {{ $logo | absURL }}{{ end }}"
+        alt="{{ site.Title }}">
+      {{ else }}
+      <img class="img-fluid" src="{{ $logo | absURL }}" alt="{{ site.Title }}">
+      {{ end }}
+      {{ else }}
+      {{ site.Title }}
+      {{ end }}
+    </a>
+    <!-- Language List -->
+    {{- if site.IsMultiLingual }}
+    <select class="lang-list {{ if not .IsHome }}dark{{ end }}" id="select-language"
+      onchange="location = this.value;">
+      {{ $siteLanguages := site.Languages}}
+      {{ $pageLang := .Page.Lang}}
+      {{ range .Page.AllTranslations }}
+      {{ $translation := .}}
+      {{ range $siteLanguages }}
+      {{ if eq $translation.Lang .Lang }}
+      {{ $selected := false }}
+      {{ if eq $pageLang .Lang}}
+      <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}" selected>{{ .LanguageName }}
+      </option>
+      {{ else }}
+      <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}">{{ .LanguageName }}</option>
+      {{ end }}
+      {{ end }}
+      {{ end }}
+      {{ end }}
+    </select>
+    {{ end }}
+  </div>
+</nav>

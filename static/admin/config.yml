@@ -1,0 +1,50 @@
+backend:
+  name: github
+  repo: butterops/butterops.dev # Path to your GitHub repository
+  open_authoring: true
+  branch: main
+
+local_backend: true
+
+publish_mode: editorial_workflow
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+i18n:
+  structure: multiple_files
+  locales: [en, fr]
+  default_locale: en
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Contact Page"
+        name: "contact"
+        file: "site/content/contact/_index.en.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+  - name: courses
+    i18n: true
+    label: Courses
+    label_singular: 'Course'
+    folder: content
+    filter: {field: "type", value: "docs"}
+    create: true
+    allow_nesting: true
+    # adding a nested object will show the collection folder structure
+    nested:
+      depth: 100 # max depth to show in the collection tree
+      summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        ii8n: true
+      - label: Body
+        name: body
+        widget: markdown
+    # adding a meta object with a path property allows editing the path of entries
+    # moving an existing entry will move the entire sub tree of the entry to the new location
+    meta: { path: { widget: string, label: 'Path', index_file: '_index.md' } }
