@@ -187,25 +187,25 @@ url = "contact"
 weight = 3
 
 # Dropdown menu
-[[Languages.fr.menu.main]]
-weight = 4
-name = "docs"
-hasChildren = true
+# [[Languages.fr.menu.main]]
+# weight = 4
+# name = "docs"
+# hasChildren = true
 
-  [[Languages.fr.menu.main]]
-  parent = "docs"
-  name = "Installation"
-  url = "installation"
-  weight = 1
+  # [[Languages.fr.menu.main]]
+  # parent = "docs"
+  # name = "Installation"
+  # url = "installation"
+  # weight = 1
 
-  [[Languages.fr.menu.main]]
-  parent = "docs"
-  name = "Billing and Pricing"
-  url = "billing-pricing"
-  weight = 2
+  # [[Languages.fr.menu.main]]
+  # parent = "docs"
+  # name = "Billing and Pricing"
+  # url = "billing-pricing"
+  # weight = 2
 
-  [[Languages.fr.menu.main]]
-  parent = "docs"
-  name = "Features"
-  url = "features"
-  weight = 3
+  # [[Languages.fr.menu.main]]
+  # parent = "docs"
+  # name = "Features"
+  # url = "features"
+  # weight = 3

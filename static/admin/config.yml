@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: butterops/butterops.dev # Path to your GitHub repository
+  repo: mrdotkg/terrasaas # Path to your GitHub repository
   open_authoring: true
   branch: main
 
@@ -19,9 +19,15 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
+      - label: "FAQ Page"
+        name: "faq"
+        file: "content/faq/_index.en.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
       - label: "Contact Page"
         name: "contact"
-        file: "site/content/contact/_index.en.md"
+        file: "content/contact/_index.en.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
@@ -29,7 +35,7 @@ collections:
     i18n: true
     label: Courses
     label_singular: 'Course'
-    folder: content
+    folder: content/
     filter: {field: "type", value: "docs"}
     create: true
     allow_nesting: true
@@ -47,4 +53,4 @@ collections:
         widget: markdown
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
-    meta: { path: { widget: string, label: 'Path', index_file: '_index.md' } }
+    meta: { path: { widget: string, label: 'Path', index_file: '_index' } }
