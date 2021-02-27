@@ -16,8 +16,8 @@ i18n:
   default_locale: en
 
 collections:
-  - label: "Pages"
-    name: "pages"
+  - name: "pages"
+    label: "Pages"
     files:
       - label: "FAQ Page"
         name: "faq"
@@ -31,8 +31,12 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
-      - label: "CMS Config"
-        name: "cms-config"
+  - name: "settings"
+    label: "Settings"
+    format: frontmatter  #<--------------------------- Workaround
+    files:
+      - name: "cms-config"
+        label: "CMS Config"
         file: "static/admin/config.yml"
         fields:
           - {label: "Content", name: "body", widget: "text"}
