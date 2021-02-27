@@ -6,6 +6,7 @@ weight: 4
 draft: false
 # search related keywords
 keywords: [""]
+layout: "course"
 ---
 
 **Dot** has been built to be as configurable as possible.

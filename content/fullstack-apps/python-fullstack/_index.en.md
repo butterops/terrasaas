@@ -5,6 +5,7 @@ icon: "ti-desktop"
 description: "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet"
 # type : "docsx"
 weight: 4
+layout: "course"
 ---
 
 A few things about Python apps

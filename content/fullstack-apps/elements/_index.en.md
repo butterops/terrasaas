@@ -6,6 +6,7 @@ weight: 5
 draft: false
 # search related keywords
 keywords: [""]
+layout: "course"
 ---
 
 # Heading 1
