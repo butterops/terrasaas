@@ -6,6 +6,7 @@ weight: 3
 draft: false
 # search related keywords
 keywords: [""]
+layout: "course"
 ---
 
 Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id. Cras fringilla convallis elit, at eleifend mi interam.
