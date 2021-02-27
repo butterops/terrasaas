@@ -63,4 +63,4 @@ collections:
         label: "CMS Config"
         file: "static/admin/config.yml"
         fields:
-          - {label: "Content", name: "body", widget: "code"}
+          - {label: "Content", name: "body", widget: "text"}
