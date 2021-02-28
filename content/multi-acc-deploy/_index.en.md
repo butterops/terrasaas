@@ -1,5 +1,5 @@
 ---
-title: "Multi-Account AWS Infrastructure for SaaS"
+title: "Multi account aws cloud infrastructure"
 date: 2018-12-28T11:02:05+06:00
 icon: "ti-layers-alt"
 description: "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet"
