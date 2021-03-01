@@ -7,8 +7,10 @@ backend:
 local_backend: true
 
 publish_mode: editorial_workflow
-media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "static/images" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
+logo_url: "/images/logo-192.png"
+display_url: https://terrasaas.butterops.dev
 
 i18n:
   structure: multiple_files
@@ -89,6 +91,7 @@ collections:
 
   - name: "settings"
     label: "Settings"
+    format: toml
     files:
       - label: "General Settings"
         name: "general"
