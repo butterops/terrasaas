@@ -40,6 +40,7 @@ collections:
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
     meta: { path: { widget: string, label: 'Path', index_file: '_index' } }
+
   - name: "pages"
     label: "Pages"
     files:
@@ -55,12 +56,54 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
+
   - name: "settings"
     label: "Settings"
-    format: frontmatter  #<--------------------------- Workaround
+    create: true
     files:
-      - name: "cms-config"
-        label: "CMS Config"
+      - name: "en-tr"
+        label: "En Tra"
+        file: "i18n/en.yaml"
+        fields:
+          - label: "Root"
+            name: "Root"
+            widget: "string"
+          - label: "Translations"
+            name: "translations"
+            widget: "list"
+            fields: 
+              - {label: "Id", name: "id", widget: "string"}
+              - {label: "Translation", name: "translation", widget: "string"}
+      - label: "General Settings"
+        name: "general"
+        file: "config.toml"
+        fields:
+          - label: Title
+            name: title
+            widget: string
+
+  - name: config
+    label: Config
+    format: frontmatter
+    delete: false
+    files:
+      - name: english-tr
+        file: "i18n/en.yaml"
+        label: "English Translations"
+        fields:
+          - {name: body, label: EN.YAML, widget: text}
+      - name: french-tr
+        file: "i18n/fr.yaml"
+        label: "French Translations"
+        fields:
+          - {name: body, label: FR.YAML, widget: text}
+      - name: cms-config
+        label: "Netlify CMS Config"
         file: "static/admin/config.yml"
         fields:
-          - {label: "Content", name: "body", widget: "text"}
+          - {name: body, label: CONFIG.YML, widget: text}
+      - label: "Website Config"
+        name: "website-config"
+        file: "config.toml"
+        fields:
+          - {name: body, label: CONFIG.TOML, widget: text}
