@@ -43,6 +43,8 @@ collections:
 
   - name: "pages"
     label: "Pages"
+    label_singular: "Page"
+    create: true
     files:
       - label: "FAQ Page"
         name: "faq"
@@ -56,9 +58,12 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
-
-  - name: "settings"
-    label: "Settings"
+  # - name: "data"
+  #   label: "Data"
+  #   label_singular: "Data"
+  - name: "translations"
+    label: "Translations"
+    label_singular: "Translation"
     create: true
     files:
       - name: "en-tr"
@@ -81,6 +86,10 @@ collections:
             fields: 
               - {label: "Id", name: "id", widget: "string"}
               - {label: "Translation", name: "translation", widget: "string"}
+
+  - name: "settings"
+    label: "Settings"
+    files:
       - label: "General Settings"
         name: "general"
         file: "config.toml"
@@ -88,28 +97,49 @@ collections:
           - label: Title
             name: title
             widget: string
+          - label: Theme Name
+            name: theme
+            widget: string
+          # - label: Contact Form Action
+          #   name: prams[6].name
+          #   widget: text
+          - label: Design Parameters
+            name: params
+            widget: object
+            fields:
+              - label: Primary Color
+                name: primary_color
+                widget: color
+              - label: Body Color
+                name: body_color
+                widget: color
+              - label: White Color
+                name: white_color
+                widget: color
+              - label: Text Color
+                name: text_color
+                widget: color
+              - label: Text Color Dark
+                name: text_color_dark
+                widget: color
+              - label: Font Family
+                name: font_family
+                widget: string
+              - label: Contact Form Action
+                name: contact_form_action
+                widget: string
 
   - name: config
-    label: Config
+    label: Config Files
     format: frontmatter
     delete: false
     files:
-      - name: english-tr
-        file: "i18n/en.yaml"
-        label: "English Translations"
-        fields:
-          - {name: body, label: EN.YAML, widget: text}
-      - name: french-tr
-        file: "i18n/fr.yaml"
-        label: "French Translations"
-        fields:
-          - {name: body, label: FR.YAML, widget: text}
       - name: cms-config
         label: "Netlify CMS Config"
         file: "static/admin/config.yml"
         fields:
           - {name: body, label: CONFIG.YML, widget: text}
-      - label: "Website Config"
+      - label: "Hugo Website Config"
         name: "website-config"
         file: "config.toml"
         fields:
