@@ -65,9 +65,6 @@ collections:
         label: "En Tra"
         file: "i18n/en.yaml"
         fields:
-          - label: "Root"
-            name: "Root"
-            widget: "string"
           - label: "Translations"
             name: "translations"
             widget: "list"
