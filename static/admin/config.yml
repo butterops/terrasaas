@@ -62,8 +62,18 @@ collections:
     create: true
     files:
       - name: "en-tr"
-        label: "En Tra"
+        label: "English Translations"
         file: "i18n/en.yaml"
+        fields:
+          - label: "Translations"
+            name: "translations"
+            widget: "list"
+            fields: 
+              - {label: "Id", name: "id", widget: "string"}
+              - {label: "Translation", name: "translation", widget: "string"}
+      - name: "fr-tr"
+        label: "French Translations"
+        file: "i18n/fr.yaml"
         fields:
           - label: "Translations"
             name: "translations"
