@@ -1,6 +1,6 @@
 ################################# Default configuration ###################
 # provide your domain here
-baseURL = "https://terrasaas.netlify.app/"
+baseURL = "/"
 # theme
 theme = "dot"
 # site title
