@@ -79,16 +79,6 @@ collections:
             fields: 
               - {label: "Id", name: "id", widget: "string"}
               - {label: "Translation", name: "translation", widget: "string"}
-      - name: "fr-tr"
-        label: "French"
-        file: "i18n/fr.yaml"
-        fields:
-          - label: "Translations"
-            name: "translations"
-            widget: "list"
-            fields: 
-              - {label: "Id", name: "id", widget: "string"}
-              - {label: "Translation", name: "translation", widget: "string"}
 
   - name: "settings"
     label: "Settings"
