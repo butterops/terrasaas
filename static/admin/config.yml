@@ -71,7 +71,7 @@ collections:
     files:
       - name: "en-tr"
         label: "English"
-        file: "i18n/en.yaml"
+        file: "i18n/en.yml"
         fields:
           - label: "Translations"
             name: "translations"
