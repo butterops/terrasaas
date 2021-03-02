@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/icon" href="/images/favicon.ico"/>
+  <link rel="stylesheet" href="/plugins/themify-icons/themify-icons.css">
   <title>Content Manager - TerraSaas</title>
   <style>
     .css-n1lu6x-CustomIconWrapper {
@@ -11,6 +12,44 @@
       height: 300px !important ;
       margin-top: -150px;
     }
+
+    aside a span {
+      display: inline-flex !important;
+      justify-content: center;
+      align-items: center
+    }
+
+    aside a span svg {
+      display: none !important;
+    }
+
+    aside a span::before {
+      font-family: "themify";
+      font-size: 1.12rem;
+      font-weight: inherit;
+      content: "\e654";
+    }
+
+    aside a[href="#/collections/courses"] span::before {
+      content: "\e654";
+    }
+
+    aside a[href="#/collections/pages"] span::before {
+      content: "\e67c";
+    }
+
+    aside a[href="#/collections/translations"] span::before {
+      content: "\e672";
+    }
+
+    aside a[href="#/collections/config"] span::before {
+      content: "\e6a3";
+    }
+
+    aside a[href="#/collections/settings"] span::before {
+      content: "\e60f";
+    }
+
   </style>
 </head>
 <body>

@@ -29,7 +29,7 @@ collections:
     # adding a nested object will show the collection folder structure
     nested:
       depth: 100 # max depth to show in the collection tree
-      summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
+      summary: '{{location}}' # optional summary for a tree node, defaults to the inferred title field
     fields:
       - label: Title
         name: title
@@ -48,13 +48,13 @@ collections:
     label_singular: "Page"
     create: true
     files:
-      - label: "FAQ Page"
+      - label: "FAQs"
         name: "faq"
         file: "content/faq/_index.en.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
-      - label: "Contact Page"
+      - label: "Contact"
         name: "contact"
         file: "content/contact/_index.en.md"
         fields:
@@ -69,7 +69,7 @@ collections:
     create: true
     files:
       - name: "en-tr"
-        label: "English Translations"
+        label: "English"
         file: "i18n/en.yaml"
         fields:
           - label: "Translations"
@@ -79,7 +79,7 @@ collections:
               - {label: "Id", name: "id", widget: "string"}
               - {label: "Translation", name: "translation", widget: "string"}
       - name: "fr-tr"
-        label: "French Translations"
+        label: "French"
         file: "i18n/fr.yaml"
         fields:
           - label: "Translations"
