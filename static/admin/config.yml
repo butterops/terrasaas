@@ -3,6 +3,7 @@ backend:
   repo: mrdotkg/terrasaas # Path to your GitHub repository
   open_authoring: true
   branch: main
+  site_domain: terrasaas.butterops.dev
 
 local_backend: true
 
@@ -29,7 +30,7 @@ collections:
     # adding a nested object will show the collection folder structure
     nested:
       depth: 100 # max depth to show in the collection tree
-      summary: '{{location}}' # optional summary for a tree node, defaults to the inferred title field
+      summary: '{{ location }}' # optional summary for a tree node, defaults to the inferred title field
     fields:
       - label: Title
         name: title
