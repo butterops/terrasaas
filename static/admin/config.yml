@@ -64,18 +64,21 @@ collections:
   # - name: "data"
   #   label: "Data"
   #   label_singular: "Data"
-  # - name: "translations"
-  #   label: "Translations"
-  #   label_singular: "Translation"
-  #   create: true
-  #   files:
-  #     - name: "en-tr"
-  #       label: "English"
-  #       file: "i18n/en.yaml"
-  #       widget: "list"
-  #       fields:
-  #         - {label: "Id", name: "id", widget: "string"}
-  #         - {label: "Translation", name: "translation", widget: "string"}
+  - name: "translations"
+    label: "Translations"
+    label_singular: "Translation"
+    create: true
+    files:
+      - name: "en-tr"
+        label: "English"
+        file: "i18n/en.yaml"
+        fields:
+          - label: "Translations"
+            name: "translations"
+            widget: "list"
+            fields: 
+              - {label: "Id", name: "id", widget: "string"}
+              - {label: "Translation", name: "translation", widget: "string"}
 
   - name: "settings"
     label: "Settings"
