@@ -15,11 +15,14 @@
 					$(function() {
 					var projects = [
 						{{ range $pages }}
-						{
-							value: "{{ .Title }}",
-							label: "<p>{{.Plain}}</p>{{range.Params.Keywords}}<p>{{.}}</p>{{end}}",
-							url:"{{ .Permalink }}"
-						},
+							{{ if eq .Layout "course" }}
+
+							{
+								value: "{{ .Title }}",
+								label: "<p>{{.Plain}}</p>{{range.Params.Keywords}}<p>{{.}}</p>{{end}}",
+								url:"{{ .Permalink }}"
+							},
+							{{ end }}
 						{{ end }}
 					];
 					$( "#search" ).autocomplete({
