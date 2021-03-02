@@ -1,7 +1,5 @@
-translations:
+- id: topics_title
+  translation: "Powerful Automation Templates + DIY Guides"
 
-  - id: topics_title
-    translation: "Powerful Automation Templates + DIY Guides"
-    
-  - id: send
-    translation: Send
+- id: send
+  translation: Send
