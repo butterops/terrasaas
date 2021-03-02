@@ -40,11 +40,11 @@ contact_form_action = "#" # contact form works with : https://formspree.io
 ############################## social links ##############################
 [[params.social]]
 text = "Contact"
-link = "contact"
+link = "/contact"
 
 [[params.social]]
 text = "FAQ"
-link = "faq"
+link = "/faq"
   
 [[params.social]]
 icon = "ti-github" # themify icon pack : https://themify.me/themify-icons
